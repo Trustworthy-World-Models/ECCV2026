@@ -43,7 +43,11 @@ defineProps({
 
       <div v-if="workshop.programCommittee?.length" class="committee-block">
         <h3 class="committee-title">Program Committee</h3>
-        <div class="organizers-grid">
+        <p class="committee-description">
+          Our program committee brings together researchers and practitioners from academia and
+          industry to support a thoughtful and rigorous review process.
+        </p>
+        <div class="program-committee-grid">
           <article v-for="member in workshop.programCommittee" :key="member.name" class="organizer-card">
             <div class="avatar-sm">
               <img

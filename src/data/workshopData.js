@@ -296,7 +296,16 @@ export const workshopData = {
 
   programCommittee: [
     { name: 'Bowen Jing', affiliation: 'Tuojing AI, China', initials: 'BJ' },
-    { name: 'Chenchen Ge', affiliation: 'Southeast University, China', initials: 'CG' }
+    { name: 'Chenchen Ge', affiliation: 'Southeast University, China', initials: 'CG' },
+    { name: 'Ziying Song', affiliation: 'Nanyang Technological University, Singapore', initials: 'ZS' },
+    { name: 'Qi Song', affiliation: 'Tsinghua University, China', initials: 'QS' },
+    { name: 'Yuechen Luo', affiliation: 'Tsinghua University, China', initials: 'YL' },
+    { name: 'Lingjun Zhang', affiliation: 'Tsinghua University, China', initials: 'LZ' },
+    { name: 'Hanwen Shen', affiliation: 'Stevens Institute of Technology, USA', initials: 'HS' },
+    { name: 'Yuner Zhang', affiliation: 'Carnegie Mellon University, USA', initials: 'YZ' },
+    { name: 'Yushen Zuo', affiliation: 'SimpleAI, China', initials: 'YZ' },
+    { name: 'Jinhao Zhang', affiliation: 'Harbin Institute of Technology (Shenzhen), China', initials: 'JZ' },
+    { name: 'Sheng Wang', affiliation: 'TermiTech, China', initials: 'SW' }
   ],
 
   // ContactFaqSection.vue：页面底部联系区下方 FAQ 折叠问答。

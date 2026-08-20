@@ -37,7 +37,7 @@ async function generateOGImage() {
 
   ctx.font = '600 28px sans-serif'
   ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
-  ctx.fillText('September 8, 2026 • Malmö, Sweden', 70, 350)
+  ctx.fillText('September 9 (Morning), 2026 • Malmö, Sweden', 70, 350)
 
   ctx.font = '400 20px sans-serif'
   ctx.fillStyle = 'rgba(255, 255, 255, 0.6)'

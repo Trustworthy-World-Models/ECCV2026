@@ -840,6 +840,17 @@ h3 {
   gap: 1rem;
 }
 
+.program-committee-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.program-committee-grid .organizer-card {
+  flex: 0 1 calc((100% - 3rem) / 4);
+}
+
 .organizer-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -2059,6 +2070,10 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .program-committee-grid .organizer-card {
+    flex-basis: calc((100% - 2rem) / 3);
+  }
+
   .share-modal-body {
     grid-template-columns: 1fr;
   }
@@ -2093,6 +2108,10 @@ h3 {
 
   .organizers-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .program-committee-grid .organizer-card {
+    flex-basis: calc((100% - 1rem) / 2);
   }
 
   .countdown-values {
