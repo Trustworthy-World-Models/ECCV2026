@@ -12,6 +12,20 @@ From the authoring directory:
 
 The default destination is the sibling directory `..\ECCV2026-publish`. Use `-PublishPath` for another location. The script builds unless `-SkipBuild` is supplied, verifies the destination is a Git checkout, copies source/configuration/documentation and reusable skills, then copies `dist/` contents into the destination root for GitHub Pages.
 
+For a complete publish preparation, use `scripts/publish-update.ps1`. It creates a branch when starting from `main`, runs synchronization, stages only intended website paths, and prints the staged diff:
+
+```powershell
+.\scripts\publish-update.ps1 -BranchName website/update-description -AllowDirtyPublish
+```
+
+After reviewing the staged diff, commit and push explicitly:
+
+```powershell
+.\scripts\publish-update.ps1 -BranchName website/update-description -AllowDirtyPublish -Commit -Push
+```
+
+The script refuses direct commits to `main`, requires `-Commit` with `-Push`, excludes the private tutorial and dependencies, and uses `git push -u origin HEAD`. A 403 response remains an account-permission or credential-manager issue.
+
 ## Safety
 
 The script refuses a dirty publishing clone unless `-AllowDirtyPublish` is supplied. That switch permits synchronization over existing changes but never discards, commits, or pushes them. Pull `main` and create a branch before a normal publishing session.
