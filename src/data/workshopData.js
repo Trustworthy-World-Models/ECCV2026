@@ -6,10 +6,10 @@ export const workshopData = {
   eventLabel: 'Workshop at ECCV 2026',
   conference: 'European Conference on Computer Vision (ECCV 2026)',
   location: 'Malmö, Sweden',
-  dateDisplay: 'September 8, 2026',
+  dateDisplay: 'September 9 (Morning), 2026',
 
   // 日程区块：ScheduleSection.vue 顶部日期、时区，以及日程表时间展示。
-  scheduleDate: 'September 8, 2026',
+  scheduleDate: 'September 9 (Morning), 2026',
   scheduleTimezone: 'CEST',
 
   // 联系区块：ContactFaqSection.vue 左侧联系卡片中的邮箱。
@@ -137,22 +137,40 @@ export const workshopData = {
     { label: 'Paper Submission Deadline', date: '2026-07-15T23:59:59' },
     { label: 'Notification of Acceptance', date: '2026-08-05T23:59:59' },
     { label: 'Camera-Ready Deadline', date: '2026-08-12T23:59:59' },
-    { label: 'Workshop Date', date: '2026-09-08T13:00:00' }
+    {
+      label: 'Workshop Date',
+      date: '2026-09-09T09:00:00',
+      displayDate: 'September 9 (Morning), 2026'
+    }
   ],
 
   // ScheduleSection.vue：会议日程表。talkTitle 为空或 TBD 时按组件逻辑弱化展示。
   schedule: [
-    { time: '13:00–13:10', title: 'Introduction and Opening Remarks', speaker: 'Workshop Chairs' },
-    { time: '13:10–13:40', title: 'Invited Talk 1', speaker: 'Jiajun Wu, Stanford University', talkTitle: 'TBD' },
-    { time: '13:40–14:10', title: 'Invited Talk 2', speaker: 'Sergio Valcarcel Macua, Microsoft', talkTitle: 'TBD' },
-    { time: '14:10–15:40', title: 'Oral Presentations', speaker: '6 accepted papers, 15 min each incl. Q&A' },
-    { time: '15:40–16:00', title: 'Coffee Break & Poster Viewing', speaker: '' },
-    { time: '16:00–16:30', title: 'Invited Talk 3', speaker: 'Rudra Poudel, Toshiba Europe', talkTitle: 'Local World Models: Adapting Foundation Models for X' },
-    { time: '16:30–17:00', title: 'Invited Talk 4', speaker: 'Abhinav Valada, University of Freiburg', talkTitle: 'Open-World Embodied Intelligence: Learning from Perception to Action' },
-    { time: '17:00–17:45', title: 'Panel Discussion', speaker: 'From Synthesis to Deployment: Bridging Academic and Industry Focuses on World Models' },
-    { time: '17:45–17:55', title: 'Competition Winner Announcement', speaker: '' },
-    { time: '17:55–18:25', title: 'Online Invited Talk', speaker: 'Sergey Levine, UC Berkeley', talkTitle: 'TBD' },
-    { time: '18:25–18:30', title: 'Closing Remarks', speaker: '' }
+    { time: '08:30–08:40', title: 'Introduction and Opening Remarks', speaker: 'Workshop Chairs' },
+    { time: '08:40–09:00', title: 'Invited Talk 1', speaker: 'Jiajun Wu, Stanford University', talkTitle: 'TBD' },
+    { time: '09:00–09:20', title: 'Invited Talk 2', speaker: 'Sergio Valcarcel Macua, Microsoft', talkTitle: 'TBD' },
+    { time: '09:20–10:50', title: 'Oral Presentations', speaker: '6 accepted papers, 15 min each incl. Q&A' },
+    { time: '10:50–11:10', title: 'Coffee Break & Poster Viewing', speaker: '' },
+    { time: '11:10–11:30', title: 'Invited Talk 3', speaker: 'Rudra Poudel, Toshiba Europe', talkTitle: 'Local World Models: Adapting Foundation Models for X' },
+    { time: '11:30–11:50', title: 'Invited Talk 4', speaker: 'Abhinav Valada, University of Freiburg', talkTitle: 'Open-World Embodied Intelligence: Learning from Perception to Action' },
+    { time: '11:50–12:35', title: 'Panel Discussion', speaker: 'From Synthesis to Deployment: Bridging Academic and Industry Focuses on World Models' },
+    { time: '12:35–12:45', title: 'Competition Winner Announcement', speaker: '' },
+    { time: '12:45–13:05', title: 'Online Invited Talk', speaker: 'Sergey Levine, UC Berkeley', talkTitle: 'TBD' },
+    { time: '13:05–13:10', title: 'Closing Remarks', speaker: '' }
+  ],
+
+  // ScheduleSection.vue: venue-wide ECCV logistics displayed below the workshop program.
+  conferenceSchedule: [
+    { time: '8:00 - 17:00', event: 'Registration / Badge Pickup', location: 'Malmo Arena Lobby' },
+    { time: '8:00 - 17:00', event: "Mother's Room", location: 'tbd' },
+    { time: '8:00 - 17:00', event: 'Quiet Room', location: 'tbd' },
+    { time: '8:00 - 17:00', event: 'Prayer Room', location: 'tbd' },
+    { time: 'tbd', event: 'Poster Pickup', location: 'tbd' },
+    { time: '8:00 - 18:00', event: 'WORKSHOPS / TUTORIALS', location: 'tbd' },
+    { time: '8:00 - 18:00', event: 'Posters', location: 'Malmo Massan Exhibit Hall' },
+    { time: '10:00 - 11:00', event: 'Coffee Break', location: 'Malmo Massan Exhibit Hall' },
+    { time: '12:00 - 13:45', event: 'Lunch', location: 'Malmo Arena - Arena Room' },
+    { time: '15:00 - 16:00', event: 'Coffee Break', location: 'Malmo Massan Exhibit Hall' }
   ],
 
   // SpeakersSection.vue：邀请嘉宾卡片。头像图片由 name 字段匹配本地 assets/person 文件。

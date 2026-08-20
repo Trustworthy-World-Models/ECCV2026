@@ -43,6 +43,36 @@ function isBreak(title) {
           </tbody>
         </table>
       </div>
+
+      <div class="schedule-wrapper conference-schedule-wrapper">
+        <div class="schedule-header">
+          <strong>ECCV Daily Schedule</strong>
+          <span>{{ workshop.scheduleDate }}</span>
+        </div>
+
+        <div class="schedule-table-scroll">
+          <table class="schedule-table conference-schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+                <th scope="col">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="item in workshop.conferenceSchedule"
+                :key="`${item.time}-${item.event}`"
+                :class="{ 'schedule-break': isBreak(item.event) }"
+              >
+                <td class="schedule-time">{{ item.time }}</td>
+                <td class="schedule-title">{{ item.event }}</td>
+                <td class="schedule-location">{{ item.location }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </section>
 </template>

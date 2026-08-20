@@ -641,6 +641,14 @@ h3 {
   overflow: hidden;
 }
 
+.conference-schedule-wrapper {
+  margin-top: 1.5rem;
+}
+
+.schedule-table-scroll {
+  overflow-x: auto;
+}
+
 .schedule-header {
   display: flex;
   flex-wrap: wrap;
@@ -679,6 +687,17 @@ h3 {
   vertical-align: top;
 }
 
+.schedule-table th {
+  padding: 0.8rem 1.75rem;
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 .schedule-time {
   width: 130px;
   color: var(--primary-soft);
@@ -697,6 +716,19 @@ h3 {
   font-size: 0.875rem;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.conference-schedule-table {
+  min-width: 660px;
+}
+
+.conference-schedule-table .schedule-title {
+  margin-bottom: 0;
+}
+
+.schedule-location {
+  width: 34%;
+  color: var(--muted);
 }
 
 .schedule-break td {
@@ -2067,7 +2099,8 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .schedule-table td {
+  .schedule-table td,
+  .schedule-table th {
     padding: 0.75rem 1rem;
   }
 

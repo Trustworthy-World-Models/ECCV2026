@@ -64,8 +64,8 @@ function injectStructuredData() {
     '@type': 'Event',
     name: workshopData.fullTitle,
     description: pageDescription.value,
-    startDate: '2026-09-08',
-    endDate: '2026-09-08',
+    startDate: '2026-09-09T08:30:00+02:00',
+    endDate: '2026-09-09T13:10:00+02:00',
     eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
     location: {

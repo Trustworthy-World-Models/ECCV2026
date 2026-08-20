@@ -43,7 +43,7 @@ async function generateQRCode() {
 // 预加载赞助商图片为 DataURL 供 html2canvas 渲染
 async function loadSponsorImage() {
   try {
-    const res = await fetch('/sponsor.png')
+    const res = await fetch(`${import.meta.env.BASE_URL}sponsor.png`)
     const blob = await res.blob()
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -136,7 +136,9 @@ defineExpose({ posterRef })
           class="poster-date-row"
         >
           <span class="poster-date-label">{{ dateItem.label }}</span>
-          <span class="poster-date-value">{{ formatShortDate(dateItem.date) }}</span>
+          <span class="poster-date-value">
+            {{ dateItem.displayDate || formatShortDate(dateItem.date) }}
+          </span>
         </div>
       </div>
     </div>

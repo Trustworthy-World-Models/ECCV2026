@@ -2,6 +2,8 @@
 defineProps({
   workshop: { type: Object, required: true }
 })
+
+const sponsorSrc = `${import.meta.env.BASE_URL}sponsor.png`
 </script>
 
 <template>
@@ -14,7 +16,7 @@ defineProps({
 
       <div class="sponsors-grid">
         <div class="sponsor-card">
-          <img src="/sponsor.png" alt="Sponsor" class="sponsor-image" />
+          <img :src="sponsorSrc" alt="Sponsor" class="sponsor-image" />
         </div>
       </div>
     </div>

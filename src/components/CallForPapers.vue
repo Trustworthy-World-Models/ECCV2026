@@ -70,7 +70,7 @@ function formatDate(dateString) {
           <div class="date-list">
             <div v-for="entry in workshop.importantDates" :key="entry.label" class="date-row">
               <span>{{ entry.label }}</span>
-              <strong>{{ formatDate(entry.date) }}</strong>
+              <strong>{{ entry.displayDate || formatDate(entry.date) }}</strong>
             </div>
           </div>
           <CountdownTimer
